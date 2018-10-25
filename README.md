@@ -1,1 +1,0 @@
-kRHonos-config-server
