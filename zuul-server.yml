@@ -1,0 +1,8 @@
+server:
+port: 9103
+
+#Eureka
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: "http://localhost:9102/eureka/"
