@@ -2,31 +2,31 @@
 # ---- (01.)SERVER-PORT-CONFIGURATION ----
 ######################################################
 server:
-port: 9101
+  port: 9101
 
 ######################################################
 # ---- (02.)ACTUATOR-CONFIGURATION ----
 ######################################################
 management:
-endpoints:
-web:
-exposure:
-include: "*"
+  endpoints:
+    web:
+      exposure:
+        include: "*"
 
 ######################################################
 # ---- (03.)EUREKA-CONFIGURATION ----
 ######################################################
 eureka:
-client:
-serviceUrl:
-defaultZone: "http://localhost:9102/eureka/"
+  client:
+    serviceUrl:
+      defaultZone: "http://localhost:9102/eureka/"
 
 ######################################################
 # ---- (04.)SPRING-CONFIGURATION ----
 ######################################################
 spring:
-application:
-name: zuul-server
+  application:
+    name: zuul-server
 #security:
 #user:
 #name: "utilisateur"
@@ -36,19 +36,19 @@ name: zuul-server
 # ---- (05.)HYSTRIX-CONFIGURATION ----
 ######################################################
 hystrix:
-command:
-default:
-execution:
-timeout:
-enabled: false
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
 
 ######################################################
 # ---- (06.)ZUUL-CONFIGURATION ----
 ######################################################
 zuul:
-host:
-socket-timeout-millis: 5000
-connect-timeout-millis: 5000
+  host:
+    socket-timeout-millis: 5000
+      connect-timeout-millis: 5000
 #routes:
 #calendrier:
 #path: /calendrier/**
@@ -69,7 +69,7 @@ connect-timeout-millis: 5000
 # ---- (08.)LOGGING-CONFIGURATION ----
 ######################################################
 logging:
-config: "classpath:log4j2-spring.xml"
+  config: "classpath:log4j2-spring.xml"
 
 ######################################################
 # ---- (09.)MY CONFIGURATION ----
